@@ -1,5 +1,9 @@
 # **N-Body VR Simulator**
 
+<p align="center">
+  <img src="image.png" alt="N-Body VR Simulator" width="50%">
+</p>
+
 During our internship at **CNR-ICAR**, we developed a project to integrate a neural network model from N-Body problem experiments into an interactive VR environment. This allows users to create and simulate custom planetary systems.
 
 In this environment, users can create planets via a user interface, specifying attributes like mass, position, and velocity. These planets are then visualized as small objects that can be positioned within the simulation area.
