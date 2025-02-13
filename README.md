@@ -10,37 +10,47 @@ The **GATr** (Geometric Algebra Transformer) model processes the planet data to 
 
 1. [Project Overview](#project-overview)
 2. [System Architecture](#system-architecture)
-    - [Progect Architecture](#progect-architecture)
-    - [GATr Neural Network](#gatr-neural-network)
-    - [Unity Architecture](#unity-architecture)
 3. [Installation Guide](#installation-guide)
 4. [Usage](#usage)
 5. [Execution Example](#execution-example)
 6. [Issues and Limitations](#issues-and-limitations)
 7. [Code Structure](#code-structure)
 8. [References](#references)
-9. [License](#license)
-
 
 ## **Project Overview**
 
-1. Project Objectives
-2. Key Features
-3. Technologies Used
+The N-Body VR Simulator is a project that combines a neural network model with a virtual reality (VR) environment to simulate the motion of celestial bodies. The project is built using the Unity game engine and utilizes the GATr (Geometric Algebra Transformer) model to predict the final positions and trajectories of the celestial bodies. The model is first trained on a dataset of positions and velocities of celestial bodies, and then used to simulate the motion of the bodies in the VR environment. The project is designed to be interactive, allowing users to create and customize their own planetary systems and then simulate their evolution over time.
+
+### Technologies Used
+
+The N-Body VR Simulator project utilizes a range of tecnologies to achieve its goals. Some of them are: 
+
+- **Unity**: A popular game engine for building interactive 3D simulations.
+- **GATr**: A neural network model based on Geometric Algebra Transformers for predicting the positions and trajectories of celestial bodies.
+- **ONNX**: An open standard for representing machine learning models, used for exporting and importing the GATr model.
+- **Python**: A programming language used for developing the GATr model and generating the dataset.
+- **C#**: A programming language used for developing the Unity application.
 
 ## **System Architecture**
 
-1. General Architecture: Details on how project components interact.
-2. Submodule Architecture: Includes ONNX model generation and step-by-step procedures.
+The system consists of two main components:
+1. **GATr Neural Network**: Predicts the final trajectories of celestial bodies based on their initial parameters.
+2. **Unity Application**: Visualizes the results of the predictions in a VR environment, allowing users to interact with the planets.
 
-### GATr Neural Network
+<p align="center">
+  <img src="Presentazione/Images/Architecture.png" width="200">
+</p>
 
-3. Data Flow: From user input to final simulation.
-4. Architecture Diagrams.
 
 ## **Installation Guide**
 
-1. **Trained ONNX Model Acquisition**
+1. **System Requirements**
+* Python 3.10
+* Unity 2021.3.23f1
+* Docker
+* git
+
+2. **Trained ONNX Model Acquisition**
    - Clone the repository:
      ```bash
      git clone https://github.com/H-Alin02/N-BodyVRSimulator.git
@@ -69,18 +79,46 @@ The **GATr** (Geometric Algebra Transformer) model processes the planet data to 
      ```
    - Access the trained ONNX model in `Model` inside `GATr/GATrExperiments/experiments/nbody/gatr/models`.
 
-2. **Unity Project Zip Download**
+3. **Unity Project Zip Download**
 
-3. **Post Project Opening Steps in Unity**
+4. **Post Project Opening Steps in Unity**
 
 ## **Usage**
 
 Instructions on using the code and Unity project to create a functional build and launch the application on a headset. Interaction details with the simulation.
 
-#### Execution Example
+### Guida all'Uso
+
+1. **Unity Project Opening Steps**
+
+- Open the Unity project in the Unity Editor
+- Build the Unity project
+- Run the Unity project on the VR headset
+
+2. **Interaction with the Simulation**
+
+- In the game, go to the UI and select the desired planet to create or the star.
+- Insert the desired parameters for the planet or the star.
+- Click the "Confirm" button to create the planet or the star object.
+- Grab the planet and move it inside the portal on the left. The planet will be teleported inside the simulation area. 
+- Go back to the UI and create other planets. 
+- Go to the simulation area.
+- On the UI click the "Start" button to start the simulation.
+- Restart the simulation or reset the simulation by clicking the "Reset" button on the UI.
+
+3. **VR Controls**
+- **Move**: Left joystick
+- **Look Around**: Right joystick
+- **Grab**: Right gab trigger
+
+## **Uxecution Example**
+
+### Inference Example in Python
 
 - **Input**: Tensor of dimension [1, 4, 7] (1 sample for 4 planets, 7 parameters)
   - Initial masses: 
+    ```
+    [0.02146309 0.01986073 1.115385 0.02487979]
     ```
     [0.02146309 0.01986073 1.115385 0.02487979]
     ```
@@ -116,6 +154,9 @@ Instructions on using the code and Unity project to create a functional build an
         [-18.90975347  -4.20430149  -1.40140385]]
         ```
 
+### **Video Demo**
+    - A video demonstrating the VR environment is available at [this link](https://drive.google.com/file/d/14iajbuJ-bFwVF7ivHumFDVOLlsFbgHqF/view?usp=sharing).
+
 ## **Issues and Limitations**
 
 ## **Code Structure**
@@ -125,3 +166,4 @@ Instructions on using the code and Unity project to create a functional build an
 - [Geometric Algebra Transformer](https://arxiv.org/abs/2305.18415)
 
 ## **License**
+
