@@ -158,8 +158,8 @@ Instructions on using the code and Unity project to create a functional build an
         [-18.90975347  -4.20430149  -1.40140385]]
         ```
 
-### **Video Demo**
-    - A video demonstrating the VR environment is available at [this link](https://drive.google.com/file/d/14iajbuJ-bFwVF7ivHumFDVOLlsFbgHqF/view?usp=sharing).
+### **Video Demo** 
+A video demonstrating the VR environment is available at [this link](https://drive.google.com/file/d/14iajbuJ-bFwVF7ivHumFDVOLlsFbgHqF/view?usp=sharing).
 
 ## **Issues and Limitations**
 
