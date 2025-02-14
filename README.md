@@ -124,8 +124,6 @@ Instructions on using the code and Unity project to create a functional build an
     ```
     [0.02146309 0.01986073 1.115385 0.02487979]
     ```
-    [0.02146309 0.01986073 1.115385 0.02487979]
-    ```
   - Initial positions (x, y, z): 
     ```
     [[-19.30458052  -5.09142425  -1.71743116]
